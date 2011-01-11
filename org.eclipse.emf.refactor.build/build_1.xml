@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+IMPORTANT: Run it in the same JRE as the workspace. 
+Run AS -> ANT Build.. -> JRE -> Run in the same JRE as the workspace.
+
+-->
+<project default="feature.export" name="feature.generate" basedir=".">
+
+	<property name="home" location=""/>
+	<property name="build.dir" location="build"/>
+	<property name="qualifier.file" location="qualifier.txt"/>
+	
+	<target name="clean">
+	   <delete dir="${build.dir}"/>
+	</target>
+
+	<target name="init" depends="clean">
+		<tstamp>
+			<format property="qualifier" pattern="yyyyMMddHHmmss" />
+		</tstamp>
+		<echo file="${qualifier.file}">qualifier=${qualifier}</echo>
+	</target>
+	
+	<!-- Have to be replaced: -->	
+	<target name="feature.export" depends="init">
+		<pde.exportFeatures  
+			destination="${build.dir}/source" 
+			exportSource="false" 
+			exportType="directory" 
+			qualifier="${qualifier}"
+			features="org.eclipse.emf.refactor.runtime.feature,org.eclipse.emf.refactor.generator.feature,org.eclipse.emf.refactor.henshin.feature" useJARFormat="true"/>
+	</target>
+	
+</project>
