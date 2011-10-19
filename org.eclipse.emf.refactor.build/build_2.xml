@@ -5,8 +5,8 @@ IMPORTANT: Run it in the same JRE as the workspace.
 Run AS -> ANT Build.. -> JRE -> Run in the same JRE as the workspace.
 
 -->
-<project default="feature.publish" name="build.site" basedir=".">
-<!--project default="download.page.generate" name="build.site" basedir="."-->
+<!--project default="feature.publish" name="build.site" basedir="."-->
+<project default="download.page.generate" name="build.site" basedir=".">
 
 	<property name="home" location=""/>
 	<property name="build.dir" location="build"/>
@@ -83,9 +83,8 @@ Run AS -> ANT Build.. -> JRE -> Run in the same JRE as the workspace.
 	<!-- Publish update site: -->
 	<target name="download.page.generate" depends="cleanup">
 		<tstamp>
-			<format property="timestamp" pattern="dd. MMM yyyy HH:mm" />
+			<format property="timestamp" pattern="MMM dd, yyyy HH:mm" />
 		</tstamp>
-		
 		<!-- Copy Release: -->
 		<delete failonerror="false">
 			<fileset dir="../refactor/downloads/" includes="refactor-${release.no}.*.jar"/>
@@ -99,7 +98,7 @@ Run AS -> ANT Build.. -> JRE -> Run in the same JRE as the workspace.
 		    <fileset dir="resources/web-eclipse" includes="*"/>
 	    </copy>
 <echo file="${build.dir}/web-eclipse/downloads_1.php" append="true">
-&lt;h2&gt;Releases&lt;/h2&gt;
+&lt;h2&gt;Version ${release.no}&lt;/h2&gt;
 &lt;ul class="midlist"&gt;
     &lt;li&gt;&lt;a href="downloads/refactor-${release.no}.${qualifier}.jar"&gt;refactor-${release.no}.${qualifier}.jar&lt;/a&gt; (released ${timestamp})&lt;/li&gt;
 &lt;/ul&gt;

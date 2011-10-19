@@ -11,5 +11,5 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<p>
-	<h3>Version 0.6.0 (released Oct 19, 2011)</h3>
+	<h3>Releases</h3>
 		
