@@ -11,5 +11,5 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<p>
-	<h3>Releases</h3>
+	<h2>Releases</h2>
 		

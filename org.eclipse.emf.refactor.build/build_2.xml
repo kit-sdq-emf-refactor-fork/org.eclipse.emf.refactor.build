@@ -98,7 +98,7 @@ Run AS -> ANT Build.. -> JRE -> Run in the same JRE as the workspace.
 		    <fileset dir="resources/web-eclipse" includes="*"/>
 	    </copy>
 <echo file="${build.dir}/web-eclipse/downloads_1.php" append="true">
-&lt;h2&gt;Version ${release.no}&lt;/h2&gt;
+&lt;h3&gt;Version ${release.no}&lt;/h3&gt;
 &lt;ul class="midlist"&gt;
     &lt;li&gt;&lt;a href="downloads/refactor-${release.no}.${qualifier}.jar"&gt;refactor-${release.no}.${qualifier}.jar&lt;/a&gt; (released ${timestamp})&lt;/li&gt;
 &lt;/ul&gt;
