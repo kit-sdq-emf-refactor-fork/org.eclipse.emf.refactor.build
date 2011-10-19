@@ -1,4 +1,4 @@
-		<h3>Version 0.5.0 (released Jan 11, 2011)
+		<h3>Version 0.5.0 (released Jan 11, 2011)</h3>
 		<ul class="midlist">
     		<li><a href="downloads/refactor-0.5.0.20110111155417.jar">refactor-0.5.0.20110111155417.jar</a> (released Jan 11, 2011 15:54)</li>
 		</ul>
