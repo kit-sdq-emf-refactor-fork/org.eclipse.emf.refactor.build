@@ -13,7 +13,7 @@ Run AS -> ANT Build.. -> JRE -> Run in the same JRE as the workspace.
 	<property file="qualifier.txt" prefix="input"/>
 	<property name="resources.dir" location="resources"/>
 	<property name="repository.name" value="updatesite"/>
-	<property name="release.no" value="0.5.0"/>
+	<property name="release.no" value="0.6.0"/>
 	
 	<!-- Read Qualifier from file: -->
 	<target name="init">
@@ -38,6 +38,9 @@ Run AS -> ANT Build.. -> JRE -> Run in the same JRE as the workspace.
    &lt;feature url="features/org.eclipse.emf.refactor.henshin.feature_${release.no}.${qualifier}.jar" id="org.eclipse.emf.refactor.henshin.feature" version="${release.no}.${qualifier}"&gt;
       &lt;category name="org.eclipse.emf.refactor.EXTENSION"/&gt;
    &lt;/feature&gt;
+   &lt;feature url="features/org.eclipse.emf.refactor.examples.feature_${release.no}.${qualifier}.jar" id="org.eclipse.emf.refactor.examples.feature" version="${release.no}.${qualifier}"&gt;
+      &lt;category name="org.eclipse.emf.refactor.EXTENSION"/&gt;
+   &lt;/feature&gt;	
    &lt;category-def name="org.eclipse.emf.refactor.BASIC" label="Emf Refactor" version="${release.no}.${qualifier}"&gt;
       &lt;description&gt;
          Emf Refactor
