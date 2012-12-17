@@ -29,25 +29,24 @@ Run AS -> ANT Build.. -> JRE -> Run in the same JRE as the workspace.
 	    </copy>
 <echo file="${builddirectory}/${updatesite}/site.xml" append="false">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;site&gt;
-   &lt;feature url="features/org.eclipse.emf.refactor.basic.feature_${releaseno}.${qualifier}.jar" id="org.eclipse.emf.refactor.basic.feature" version="${releaseno}.${qualifier}"&gt;
-      &lt;category name="org.eclipse.emf.refactor.BASIC"/&gt;
-   &lt;/feature&gt;
-   &lt;category-def name="org.eclipse.emf.refactor.BASIC" label="EMF Refactor - Basic Components" version="${releaseno}.${qualifier}"/&gt;
-   
+	&lt;feature url="features/org.eclipse.emf.refactor.basic.feature_${releaseno}.${qualifier}.jar" id="org.eclipse.emf.refactor.basic.feature" version="${releaseno}.${qualifier}"&gt;
+    	&lt;category name="EMF Refactor (Incubation)"/&gt;
+   	&lt;/feature&gt;
+   	&lt;category-def name="EMF Refactor (Incubation)" label="EMF Refactor (Incubation)"/&gt;
 &lt;/site&gt;
 </echo>
 	</target>    		
 
 	<!-- Publish update site: -->
+	<!-- target name="feature.publish" depends="site.add" -->	
+	<!-- categoryversion="${releaseno}.${qualifier}" -->
 	<target name="feature.publish" depends="site.add">	
 		<eclipse.publish.featuresAndBundles
-			 site="file:${builddirectory}/${updatesite}/site.xml"
-			 categoryversion="${releaseno}.${qualifier}"
+			 site="file:${builddirectory}/${updatesite}/site.xml"			
 			 repository="file:${builddirectory}/${updatesite}" 			  
-			 compress="true"			 
-			 >
-		     <features dir="${builddirectory}/source/features/" includes="*.jar"/>
-		     <bundles dir="${builddirectory}/source/plugins/" includes="*.jar"/>
+			 compress="true">
+		     	<features dir="${builddirectory}/source/features/" includes="*.jar"/>
+		     	<bundles dir="${builddirectory}/source/plugins/" includes="*.jar"/>
 		</eclipse.publish.featuresAndBundles>
 		<zip destfile="${builddirectory}/refactor-${releaseno}.${qualifier}.jar">
 			<fileset dir="${builddirectory}/${updatesite}/"/>
