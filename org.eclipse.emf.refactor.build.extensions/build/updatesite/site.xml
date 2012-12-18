@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+	<feature url="features/org.eclipse.emf.refactor.henshin.feature_0.7.0.20121218154459.jar" id="org.eclipse.emf.refactor.henshin.feature" version="0.7.0.20121218154459">
+    	<category name="EMF Refactor - Specification Extensions (Incubation)"/>
+   	</feature>
+	<feature url="features/org.eclipse.emf.refactor.ocl.feature_0.7.0.20121218154459.jar" id="org.eclipse.emf.refactor.ocl.feature" version="0.7.0.20121218154459">
+	    	<category name="EMF Refactor - Specification Extensions (Incubation)"/>
+	   	</feature>
+	<feature url="features/org.eclipse.emf.refactor.papyrus.feature_0.7.0.20121218154459.jar" id="org.eclipse.emf.refactor.papyrus.feature" version="0.7.0.20121218154459">
+	    	<category name="EMF Refactor - Runtime Extensions (Incubation)"/>
+	   	</feature>
+	<feature url="features/org.eclipse.emf.refactor.reporter.feature_0.7.0.20121218154459.jar" id="org.eclipse.emf.refactor.reporter.feature" version="0.7.0.20121218154459">
+	    	<category name="EMF Refactor - Runtime Extensions (Incubation)"/>
+	   	</feature>
+   	<category-def name="EMF Refactor - Specification Extensions (Incubation)" label="EMF Refactor - Specification Extensions (Incubation)"/>
+	<category-def name="EMF Refactor - Runtime Extensions (Incubation)" label="EMF Refactor - Runtime Extensions (Incubation)"/>
+</site>
