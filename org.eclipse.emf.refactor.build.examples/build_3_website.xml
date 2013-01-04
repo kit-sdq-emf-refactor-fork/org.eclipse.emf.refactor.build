@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+IMPORTANT: Run it in the same JRE as the workspace. 
+Run AS -> ANT Build.. -> JRE -> Run in the same JRE as the workspace.
+
+-->
+
+<project default="downloadpage.generate" name="downloadpage.generate" basedir=".">
+
+	<property name="home" location=""/>
+	<property name="builddirectory" location="build"/>
+	<property file="qualifier.txt" prefix="input"/>
+	<property name="releaseno" value="0.7.0"/>  
+	
+	<!-- Read qualifier from file: -->
+	<target name="init">
+		<property name="qualifier" value="${input.qualifier}"/>
+	</target>    
+
+	<!-- Publish download page: -->
+	<target name="downloadpage.generate" depends="init">
+		<tstamp>
+			<format property="timestamp" pattern="MMM dd, yyyy HH:mm" />
+		</tstamp>
+		
+		<!-- Copy release: -->
+		<delete failonerror="false">
+			<fileset dir="../../emf-refactor/downloads/" includes="refactor-examples-${releaseno}.*.jar"/>
+		</delete>
+		<copy todir="../../emf-refactor/downloads/">
+		    <fileset file="${builddirectory}/refactor-examples-${releaseno}.${qualifier}.jar"/>
+	    </copy>
+		
+		<!-- Generate download file: -->
+		<copy todir="${builddirectory}/web-eclipse">
+		    <fileset dir="resources/web-eclipse" includes="*"/>
+	    </copy>
+<echo file="${builddirectory}/web-eclipse/downloads_1.php" append="true">
+&lt;h3&gt;Version ${releaseno}&lt;/h3&gt;
+&lt;ul class="midlist"&gt;
+    &lt;li&gt;&lt;a href="downloads/refactor-examples-${releaseno}.${qualifier}.jar"&gt;refactor-examples-${releaseno}.${qualifier}.jar&lt;/a&gt; (released ${timestamp})&lt;/li&gt;
+&lt;/ul&gt;
+</echo>
+		<concat destfile="${builddirectory}/web-eclipse/downloads.php">
+		    <fileset dir="${builddirectory}/web-eclipse" includes="downloads_*.php"/>
+		</concat>
+		
+		<!-- Update Download-File on website: -->
+		<!-- copy todir="../../emf-refactor/" overwrite="true">
+		    <fileset file="${builddirectory}/web-eclipse/downloads.php"/>
+	    </copy -->
+		
+	</target>    		
+
+	
+</project>
