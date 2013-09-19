@@ -11,7 +11,7 @@ Run AS -> ANT Build.. -> JRE -> Run in the same JRE as the workspace.
 	<property name="home" location=""/>
 	<property name="builddirectory" location="build"/>
 	<property file="qualifier.txt" prefix="input"/>
-	<property name="releaseno" value="0.7.0"/>  
+	<property name="releaseno" value="0.8.0"/>  
 	
 	<!-- Read qualifier from file: -->
 	<target name="init">
@@ -48,7 +48,7 @@ Run AS -> ANT Build.. -> JRE -> Run in the same JRE as the workspace.
 		
 		<!-- Update Download-File on website: -->
 		<copy todir="../../emf-refactor/" overwrite="true">
-		    <fileset file="${builddirectory}/web-eclipse/downloads.php"/>
+		    <fileset file="${builddirectory}/web-eclipse/downloads_1.php"/>
 	    </copy>
 		
 	</target>    		

@@ -13,7 +13,7 @@ Run AS -> ANT Build.. -> JRE -> Run in the same JRE as the workspace.
 	<property file="qualifier.txt" prefix="input"/>
 	<property name="resourcesdirectory" location="resources"/>
 	<property name="updatesite" value="updatesite"/>
-	<property name="releaseno" value="0.7.0"/>
+	<property name="releaseno" value="0.8.0"/>
 	
 	<!-- Read qualifier from file: -->
 	<target name="init">
@@ -35,12 +35,18 @@ Run AS -> ANT Build.. -> JRE -> Run in the same JRE as the workspace.
 	&lt;feature url="features/org.eclipse.emf.refactor.ocl.feature_${releaseno}.${qualifier}.jar" id="org.eclipse.emf.refactor.ocl.feature" version="${releaseno}.${qualifier}"&gt;
 	    	&lt;category name="EMF Refactor - Specification Extensions (Incubation)"/&gt;
 	   	&lt;/feature&gt;
+	&lt;feature url="features/org.eclipse.emf.refactor.comrel.feature_${releaseno}.${qualifier}.jar" id="org.eclipse.emf.refactor.comrel.feature" version="${releaseno}.${qualifier}"&gt;
+		    &lt;category name="EMF Refactor - Specification Extensions (Incubation)"/&gt;
+		&lt;/feature&gt;
 	&lt;feature url="features/org.eclipse.emf.refactor.papyrus.feature_${releaseno}.${qualifier}.jar" id="org.eclipse.emf.refactor.papyrus.feature" version="${releaseno}.${qualifier}"&gt;
 	    	&lt;category name="EMF Refactor - Runtime Extensions (Incubation)"/&gt;
 	   	&lt;/feature&gt;
 	&lt;feature url="features/org.eclipse.emf.refactor.reporter.feature_${releaseno}.${qualifier}.jar" id="org.eclipse.emf.refactor.reporter.feature" version="${releaseno}.${qualifier}"&gt;
 	    	&lt;category name="EMF Refactor - Runtime Extensions (Incubation)"/&gt;
 	   	&lt;/feature&gt;
+	&lt;feature url="features/org.eclipse.emf.refactor.xtext.feature_${releaseno}.${qualifier}.jar" id="org.eclipse.emf.refactor.xtext.feature" version="${releaseno}.${qualifier}"&gt;
+		   	&lt;category name="EMF Refactor - Runtime Extensions (Incubation)"/&gt;
+		&lt;/feature&gt;
    	&lt;category-def name="EMF Refactor - Specification Extensions (Incubation)" label="EMF Refactor - Specification Extensions (Incubation)"/&gt;
 	&lt;category-def name="EMF Refactor - Runtime Extensions (Incubation)" label="EMF Refactor - Runtime Extensions (Incubation)"/&gt;
 &lt;/site&gt;
