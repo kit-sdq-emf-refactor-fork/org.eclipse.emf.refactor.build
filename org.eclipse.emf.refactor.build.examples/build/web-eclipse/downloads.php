@@ -15,7 +15,7 @@
 		
 <h3>Version 0.8.0</h3>
 <ul class="midlist">
-    <li><a href="downloads/refactor-examples-0.8.0.20130924161022.jar">refactor-examples-0.8.0.20130924161022.jar</a> (released Sep 24, 2013 16:12)</li>
+    <li><a href="downloads/refactor-examples-0.8.0.20130926154816.jar">refactor-examples-0.8.0.20130926154816.jar</a> (released Sep 27, 2013 10:46)</li>
 </ul>
 	</div>
 	
