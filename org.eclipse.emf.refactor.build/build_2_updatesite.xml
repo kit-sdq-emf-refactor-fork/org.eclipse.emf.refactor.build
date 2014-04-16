@@ -13,7 +13,7 @@ Run AS -> ANT Build.. -> JRE -> Run in the same JRE as the workspace.
 	<property file="qualifier.txt" prefix="input"/>
 	<property name="resourcesdirectory" location="resources"/>
 	<property name="updatesite" value="updatesite"/>
-	<property name="releaseno" value="0.8.0"/>
+	<property name="releaseno" value="0.9.0"/>
 	
 	<!-- Read qualifier from file: -->
 	<target name="init">
