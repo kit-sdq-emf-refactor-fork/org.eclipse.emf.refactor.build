@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.emf.refactor.buckminster"
+      label="EMF Refactor Buckminster Build Feature"
+      version="1.0.0.qualifier">
+
+   <includes
+         id="org.eclipse.emf.refactor.feature"
+         version="0.0.0"/>
+
+</feature>
