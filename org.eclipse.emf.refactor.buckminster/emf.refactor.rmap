@@ -12,6 +12,7 @@
   <rm:locator pattern="^org\.eclipse\.emf\.henshin(\..+)?" searchPathRef="henshin.p2" failOnError="false"/>
   <rm:locator pattern="^org\.eclipse(\..+)?" searchPathRef="oxygen.p2" failOnError="false"/>
   <rm:locator pattern="^edu\.kit\.ipd\.sdq\.emf\.refactor(\..+)?" searchPathRef="edu.kit.ipd.sdq.emf.refactor.local" failOnError="false"/>
+  <rm:locator pattern="^edu\.kit\.ipd\.sdq\.ecoregraph(\..+)?" searchPathRef="edu.kit.ipd.sdq.emf.refactor.local" failOnError="false"/>
   <rm:locator searchPathRef="platform" failOnError="false"/>
   <rm:locator searchPathRef="oxygen" failOnError="false"/>
   <rm:locator searchPathRef="orbit"/>
@@ -71,6 +72,7 @@
       </rm:uri>
     </rm:provider>
   </rm:searchPath>
+    
   <rm:searchPath name="org.eclipse.emf.refactor.smells.local">
     <rm:provider componentTypes="osgi.bundle,eclipse.feature,buckminster" readerType="local">
       <rm:uri format="{0}/org.eclipse.emf.refactor.smells/{1}">
